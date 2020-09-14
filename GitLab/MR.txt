@@ -1,0 +1,12 @@
+#MR
+
+###Merge Request
+- 다른 브랜치의 변경 사항을 반영하기 위한 요청 (병합 요청)
+- 코드 반영되기 전에 검수작업
+- Source Branch : 병합의 소스가 되는 Branch (작업 Branch)
+- Target Branch : 작업된 코드가 추가될 Branch (대상 Branch)
+
+###MR을 하는 이유
+- 코드리뷰 수월
+- master 브랜치의 안정성 유지 (한번 확인하는 작업)
+- 보안

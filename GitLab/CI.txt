@@ -1,0 +1,41 @@
+#CI
+
+### CI?
+- Continuos Integration
+- 새로운 코드에 대한 변경사항이 꾸준히 자동으로 빌드 및 테스트되어 여러 개발자가 동시에 작섭할 때 인터럽트가 발생하는 것을 방지
+- 안정성 유지 및 시간 절약
+- Gitlab의 CI 기능의 설정들이 포함된 파일의 이름 : .gitlab-ci.yml
+
+### CI 하지 않고 빌드하기
+- CI/CD가 없을 때
+	- 코드 작성(개발자) -> 빌드(개발자) -> 테스트(개발자) -> 배포(개발자)
+- CI/CD가 있을 때
+	- 코드 작성(개발자) -> [빌드-테스트-배포](깃랩)
+
+- 테스트
+npm install express
+npm install --save-dev mocha should supertest
+npm test
+
+- Heroku 배포
+npm install -g heroku
+heroku login
+heroku create
+git push heroku master
+- 배포확인
+url - 프로젝트이름.herokuapp.com
+
+### CI로 자동화
+- 프로젝트에 CI 적용
+	- Unprotected branch에 push 할 때
+		test 및 lint 진행
+	- Protected branch에 MR 할 때
+		test 및 lint 진행, 실패 시 Merge 불가
+	- Protected branch에 push 할 때 / merge 할 때
+		test 및 lint 진행, 성공 시 deploy
+
+
+### CD?
+- stage
+	- 앞 단계를 성공적으로 마쳐야 다음 단계 실행
+	- 특정 브랜치만 작업 가능 : only 키워드

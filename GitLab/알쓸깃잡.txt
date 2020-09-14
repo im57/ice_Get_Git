@@ -1,0 +1,35 @@
+# 알쓸깃잡
+
+### Wiki
+- 프로젝트 관련 설명
+
+
+### Member 권한
+- Group : 프로젝트와 프로젝트에 속한 팀원 관리
+- 서브그룹, 프로젝트는 상위 멤버들을 상속함
+- 그룹을 한 번에 초대하면 권한이 Max access level을 넘지 못하도록 설정 가능 (Max access level - developer => Owner->developer , Guest -> Guest)
+- 그룹 아래에 추가적으로 서브그룹 생성이 가능
+
+
+### Lint
+- 가독성 문제 해결
+- '' "" 통일
+- 누락된 ; 찾기
+- 선언되었지만 사용되지 않은 변수 알려줌
+- 사용되었지만 선언되지 않은 변수 알려줌
+
+npm install --save-dev eslint
+./node_modules/.bin/eslint --init //설정
+./node_modules/.bin/eslint . //실행
+./node_modules/.bin/eslint . --fix // 자동 수정
+CI에 추가 시킴 (프로젝트 실행 전)
+
+- 주석으로 에러 검사 안 할 부분 지정
+/*global 변수이름*/
+
+
+### Operation
+- Metrics : 메모리 사용량
+- Environment : 배포 환경 관리
+- Error Tracking : 배포된 서비스에서 발생하는 Error에 대한 정보를 추적
+- Feature Flags : 특정 기능 on off
